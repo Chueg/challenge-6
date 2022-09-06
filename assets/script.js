@@ -97,7 +97,7 @@ function inputButton(hoopla){
 
 function apiCall()
 {
-    fetch(`http://api.openweathermap.org/geo/1.0/direct?q=${input}&limit=5&appid=59d462275a051f39362a74d24de5a331`)
+    fetch(`https://api.openweathermap.org/geo/1.0/direct?q=${input}&limit=5&appid=59d462275a051f39362a74d24de5a331`)
   .then(function (response) {
     return response.json();
   })
@@ -153,7 +153,7 @@ function uviColor(data){
 
 function apiCall2()
 {
-    fetch(`http://api.openweathermap.org/geo/1.0/direct?q=${input}&limit=5&appid=59d462275a051f39362a74d24de5a331`)
+    fetch(`https://api.openweathermap.org/geo/1.0/direct?q=${input}&limit=5&appid=59d462275a051f39362a74d24de5a331`)
   .then(function (response) {
     return response.json();
   })
