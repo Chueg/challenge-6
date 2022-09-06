@@ -131,18 +131,18 @@ function uviColor(data){
     var lunch = data.current.uvi;
     console.log(lunch);
 
-    if(lunch <= .3)
+    if(lunch <= 3)
     {
         currentUVI.removeAttribute('class');
         currentUVI.classList.add("uviGreen");
     }
         
-    else if(.3 < lunch < .5)
+    else if(3 < lunch < 5)
     {
         currentUVI.removeAttribute('class');
         currentUVI.classList.add("uviYellow");
     }
-    else if(.5 <= lunch)
+    else if(5 <= lunch)
     {
         currentUVI.removeAttribute('class');
         currentUVI.classList.add("uviRed");
