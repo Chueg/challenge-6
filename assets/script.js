@@ -105,7 +105,6 @@ function apiCall()
     lump = data.length;
     if(data.length == 0)
     {
-        console.log('boner');
         return;
     }
     tempLat = data[0].lat;
@@ -129,20 +128,23 @@ function apiCall()
 }
 
 function uviColor(data){
-    let lunch = data.current.uvi;
+    var lunch = data.current.uvi;
     console.log(lunch);
 
-    if(0 <= lunch <= 3)
+    if(lunch <= .3)
     {
+        currentUVI.removeAttribute('class');
         currentUVI.classList.add("uviGreen");
     }
         
-    else if(3 < lunch < 5)
+    else if(.3 < lunch < .5)
     {
+        currentUVI.removeAttribute('class');
         currentUVI.classList.add("uviYellow");
     }
-    else if(5 <= lunch)
+    else if(.5 <= lunch)
     {
+        currentUVI.removeAttribute('class');
         currentUVI.classList.add("uviRed");
     }
 
@@ -159,7 +161,6 @@ function apiCall2()
     lump = data.length;
     if(data.length == 0)
     {
-        console.log('boner');
         return;
     }
     tempLat = data[0].lat;
@@ -228,7 +229,6 @@ function informationFill(data)
 
 function icon(data, i)
 {
-    console.log(data.daily[i].weather[0]);
     switch (data.daily[i].weather[0].main) {
         case 'Clouds':
             return '☁';
@@ -245,7 +245,6 @@ function icon(data, i)
 
 function mainIcon(data)
 {
-    console.log(data.current.weather[0].main);
     switch (data.current.weather[0].main) {
         case 'Clouds':
             return '☁';
@@ -287,7 +286,7 @@ function addToList()
     }
     if(lump == 0)
     {
-        console.log('break');
+
         return;
     }
     else{
